@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------- */
+/* Fonts: Anek Bangla (display), Hind Siliguri (body), IBM Plex Mono      */
+/* (ledger numerals for quantities/prices) — self-hosted via fontsource   */
+/* ---------------------------------------------------------------------- */
+@import "@fontsource-variable/anek-bangla/wght.css";
+@import "@fontsource/hind-siliguri/400.css";
+@import "@fontsource/hind-siliguri/500.css";
+@import "@fontsource/hind-siliguri/600.css";
+@import "@fontsource/hind-siliguri/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+:root {
+  --radius: 0.85rem;
+
+  --font-display: "Anek Bangla Variable", "Hind Siliguri", ui-sans-serif, sans-serif;
+  --font-body: "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-ledger: "IBM Plex Mono", ui-monospace, monospace;
+
+  --background: oklch(0.99 0.003 95);
+  --foreground: oklch(0.2 0.01 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 260);
+  --secondary: oklch(0.97 0.004 260);
+  --secondary-foreground: oklch(0.25 0.01 260);
+  --muted: oklch(0.96 0.004 260);
+  --muted-foreground: oklch(0.52 0.015 260);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.9 0.006 260);
+  --input: oklch(0.9 0.006 260);
+
+  /* ledger rule-line color used behind list/item cards */
+  --ledger-line: oklch(0.93 0.008 260);
+}
+
+.dark {
+  --background: oklch(0.16 0.008 260);
+  --foreground: oklch(0.94 0.004 260);
+  --card: oklch(0.21 0.009 260);
+  --card-foreground: oklch(0.94 0.004 260);
+  --popover: oklch(0.21 0.009 260);
+  --popover-foreground: oklch(0.94 0.004 260);
+  --secondary: oklch(0.27 0.009 260);
+  --secondary-foreground: oklch(0.94 0.004 260);
+  --muted: oklch(0.27 0.009 260);
+  --muted-foreground: oklch(0.68 0.012 260);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+
+  --ledger-line: oklch(1 0 0 / 6%);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Color themes — each overrides primary / accent / ring / chart-1 only,  */
+/* so switching themes re-skins buttons, links, focus rings & badges      */
+/* app-wide while neutrals (bg/card/border) stay consistent.              */
+/* ---------------------------------------------------------------------- */
+
+[data-theme="emerald"] {
+  --primary: oklch(0.52 0.13 162);
+  --primary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.95 0.045 162);
+  --accent-foreground: oklch(0.28 0.06 162);
+  --ring: oklch(0.52 0.13 162);
+  --chart-1: oklch(0.52 0.13 162);
+}
+.dark[data-theme="emerald"] {
+  --primary: oklch(0.72 0.14 162);
+  --primary-foreground: oklch(0.16 0.02 162);
+  --accent: oklch(0.28 0.05 162);
+  --accent-foreground: oklch(0.88 0.06 162);
+  --ring: oklch(0.72 0.14 162);
+  --chart-1: oklch(0.72 0.14 162);
+}
+
+[data-theme="blue"] {
+  --primary: oklch(0.55 0.17 258);
+  --primary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.95 0.04 258);
+  --accent-foreground: oklch(0.3 0.08 258);
+  --ring: oklch(0.55 0.17 258);
+  --chart-1: oklch(0.55 0.17 258);
+}
+.dark[data-theme="blue"] {
+  --primary: oklch(0.72 0.14 258);
+  --primary-foreground: oklch(0.16 0.02 258);
+  --accent: oklch(0.28 0.06 258);
+  --accent-foreground: oklch(0.87 0.05 258);
+  --ring: oklch(0.72 0.14 258);
+  --chart-1: oklch(0.72 0.14 258);
+}
+
+[data-theme="violet"] {
+  --primary: oklch(0.53 0.19 293);
+  --primary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.95 0.045 293);
+  --accent-foreground: oklch(0.32 0.09 293);
+  --ring: oklch(0.53 0.19 293);
+  --chart-1: oklch(0.53 0.19 293);
+}
+.dark[data-theme="violet"] {
+  --primary: oklch(0.72 0.15 293);
+  --primary-foreground: oklch(0.16 0.02 293);
+  --accent: oklch(0.29 0.07 293);
+  --accent-foreground: oklch(0.87 0.06 293);
+  --ring: oklch(0.72 0.15 293);
+  --chart-1: oklch(0.72 0.15 293);
+}
+
+[data-theme="rose"] {
+  --primary: oklch(0.58 0.19 18);
+  --primary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.95 0.045 18);
+  --accent-foreground: oklch(0.34 0.09 18);
+  --ring: oklch(0.58 0.19 18);
+  --chart-1: oklch(0.58 0.19 18);
+}
+.dark[data-theme="rose"] {
+  --primary: oklch(0.72 0.15 18);
+  --primary-foreground: oklch(0.16 0.02 18);
+  --accent: oklch(0.29 0.06 18);
+  --accent-foreground: oklch(0.87 0.06 18);
+  --ring: oklch(0.72 0.15 18);
+  --chart-1: oklch(0.72 0.15 18);
+}
+
+[data-theme="orange"] {
+  --primary: oklch(0.6 0.16 46);
+  --primary-foreground: oklch(0.99 0 0);
+  --accent: oklch(0.96 0.05 46);
+  --accent-foreground: oklch(0.34 0.08 46);
+  --ring: oklch(0.6 0.16 46);
+  --chart-1: oklch(0.6 0.16 46);
+}
+.dark[data-theme="orange"] {
+  --primary: oklch(0.74 0.14 46);
+  --primary-foreground: oklch(0.18 0.02 46);
+  --accent: oklch(0.29 0.06 46);
+  --accent-foreground: oklch(0.88 0.06 46);
+  --ring: oklch(0.74 0.14 46);
+  --chart-1: oklch(0.74 0.14 46);
+}
+
+[data-theme="slate"] {
+  --primary: oklch(0.37 0.02 255);
+  --primary-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.95 0.008 255);
+  --accent-foreground: oklch(0.3 0.02 255);
+  --ring: oklch(0.37 0.02 255);
+  --chart-1: oklch(0.37 0.02 255);
+}
+.dark[data-theme="slate"] {
+  --primary: oklch(0.76 0.015 255);
+  --primary-foreground: oklch(0.16 0.01 255);
+  --accent: oklch(0.29 0.008 255);
+  --accent-foreground: oklch(0.88 0.01 255);
+  --ring: oklch(0.76 0.015 255);
+  --chart-1: oklch(0.76 0.015 255);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-ledger);
+
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans text-base;
+    font-feature-settings: "cv11", "salt";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  /* Ledger rule-lines: a quiet nod to HaatKhata's namesake, the paper hishab
+     khata. Used sparingly behind list/item surfaces, never as decoration
+     that fights the content. */
+  .ledger-surface {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2.35rem,
+      var(--ledger-line) 2.35rem,
+      var(--ledger-line) calc(2.35rem + 1px)
+    );
+  }
+
+  .font-ledger {
+    font-family: var(--font-ledger);
+    font-variant-numeric: tabular-nums;
+  }
+}

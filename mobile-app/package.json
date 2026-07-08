@@ -1,0 +1,9 @@
+{
+  "name": "mobile-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"No dev script configured for mobile-app yet\"",
+    "build": "echo \"No build script configured for mobile-app yet\""
+  }
+}

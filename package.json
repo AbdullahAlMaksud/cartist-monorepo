@@ -1,0 +1,24 @@
+{
+  "name": "cartist-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "user-potal",
+    "admin-portal",
+    "mobile-app",
+    "server"
+  ],
+  "scripts": {
+    "dev:user": "bun run --filter cartist dev",
+    "build:user": "bun run --filter cartist build",
+    "lint:user": "bun run --filter cartist lint",
+    "dev:admin": "bun run --filter admin-portal dev",
+    "dev:server": "bun run --filter server dev",
+    "dev:mobile": "bun run --filter mobile-app dev",
+    "start:server": "bun run --filter server start"
+  },
+  "dependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  }
+}

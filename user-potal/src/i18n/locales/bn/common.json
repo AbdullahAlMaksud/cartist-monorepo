@@ -1,0 +1,156 @@
+{
+  "app": {
+    "name": "কার্টিস্ট",
+    "tagline": "আপনার শপিং লিস্ট, গোছানো এবং সুন্দরভাবে।"
+  },
+  "status": {
+    "buy": "বাই",
+    "done": "ডান",
+    "alternative": "টেক অল্টারনেটিভ"
+  },
+  "nav": {
+    "lists": "লিস্ট",
+    "settings": "সেটিংস",
+    "signIn": "সাইন ইন",
+    "signUp": "সাইন আপ",
+    "signOut": "সাইন আউট"
+  },
+  "common": {
+    "cancel": "বাতিল",
+    "save": "সেভ করুন",
+    "delete": "ডিলিট",
+    "edit": "এডিট",
+    "create": "তৈরি করুন",
+    "confirm": "নিশ্চিত করুন",
+    "loading": "লোড হচ্ছে...",
+    "search": "খুঁজুন",
+    "back": "পেছনে",
+    "or": "অথবা"
+  },
+  "lists": {
+    "title": "আপনার শপিং লিস্টসমূহ",
+    "searchPlaceholder": "লিস্ট খুঁজুন...",
+    "sortBy": "সাজান",
+    "sort": {
+      "manual": "নিজের মতো",
+      "recent": "সাম্প্রতিক আপডেট",
+      "created": "তৈরির তারিখ",
+      "name": "নাম অনুযায়ী"
+    },
+    "create": "নতুন লিস্ট",
+    "createTitle": "নতুন লিস্ট তৈরি করুন",
+    "editTitle": "লিস্ট এডিট করুন",
+    "pinned": "পিন করা",
+    "allLists": "সব লিস্ট",
+    "items_one": "{{count}}টি আইটেম",
+    "items_other": "{{count}}টি আইটেম",
+    "updated": "{{time}} আপডেট হয়েছে",
+    "empty": {
+      "title": "এখনো কোনো লিস্ট নেই",
+      "description": "আপনার পরবর্তী হাটের পরিকল্পনা শুরু করতে প্রথম শপিং লিস্টটি তৈরি করুন।",
+      "searchTitle": "কিছু পাওয়া যায়নি",
+      "searchDescription": "অন্য কিছু দিয়ে খুঁজে দেখুন।"
+    }
+  },
+  "listCard": {
+    "pin": "লিস্ট পিন করুন",
+    "unpin": "পিন সরান",
+    "edit": "লিস্ট এডিট করুন",
+    "delete": "লিস্ট ডিলিট করুন",
+    "openMenu": "লিস্ট মেনু খুলুন"
+  },
+  "listForm": {
+    "titleLabel": "লিস্টের নাম",
+    "titlePlaceholder": "যেমন: সাপ্তাহিক বাজার",
+    "submitCreate": "লিস্ট তৈরি করুন",
+    "submitEdit": "পরিবর্তন সেভ করুন"
+  },
+  "listDetails": {
+    "addProduct": "পণ্য যোগ করুন",
+    "editProduct": "পণ্য এডিট করুন",
+    "productName": "পণ্যের নাম",
+    "productNamePlaceholder": "যেমন: চাল",
+    "quantity": "পরিমাণ",
+    "quantityPlaceholder": "যেমন: ২ কেজি",
+    "price": "দাম",
+    "pricePlaceholder": "০",
+    "totalLabel": "মোট",
+    "markComplete": "কেনা হয়েছে",
+    "markIncomplete": "বাকি আছে",
+    "deleteConfirmTitle": "এই পণ্যটি ডিলিট করবেন?",
+    "deleteConfirmDescription": "এই কাজটি আর ফিরিয়ে আনা যাবে না।",
+    "deleteListConfirmTitle": "এই লিস্টটি ডিলিট করবেন?",
+    "deleteListConfirmDescription": "এই লিস্টের সব পণ্য স্থায়ীভাবে মুছে যাবে।",
+    "empty": {
+      "title": "লিস্টটি খালি",
+      "description": "শুরু করতে নিচে থেকে প্রথম পণ্যটি যোগ করুন।"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "স্বাগতম ফিরে",
+      "subtitle": "আপনার শপিং লিস্ট সিঙ্ক করতে সাইন ইন করুন।",
+      "submit": "সাইন ইন",
+      "noAccount": "অ্যাকাউন্ট নেই?",
+      "createAccount": "তৈরি করুন",
+      "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন?"
+    },
+    "signUp": {
+      "title": "আপনার অ্যাকাউন্ট তৈরি করুন",
+      "subtitle": "মিনিটেই আপনার শপিং গোছানো শুরু করুন।",
+      "submit": "অ্যাকাউন্ট তৈরি করুন",
+      "haveAccount": "আগে থেকে অ্যাকাউন্ট আছে?",
+      "signInInstead": "সাইন ইন করুন"
+    },
+    "forgotPassword": {
+      "title": "পাসওয়ার্ড রিসেট করুন",
+      "subtitle": "আমরা আপনার ইমেইলে একটি রিসেট লিংক পাঠাবো।",
+      "submit": "রিসেট লিংক পাঠান",
+      "backToSignIn": "সাইন ইনে ফিরে যান",
+      "successTitle": "ইমেইল চেক করুন",
+      "successMessage": "যদি এই ইমেইলে কোনো অ্যাকাউন্ট থাকে, একটি রিসেট লিংক পাঠানো হয়েছে।"
+    },
+    "fields": {
+      "name": "পুরো নাম",
+      "email": "ইমেইল",
+      "password": "পাসওয়ার্ড",
+      "confirmPassword": "পাসওয়ার্ড নিশ্চিত করুন"
+    },
+    "notice": "এখনো ব্যাকএন্ডের সাথে সংযুক্ত নয় — এটি একটি ওয়ার্কিং প্রিভিউ।"
+  },
+  "validation": {
+    "required": "এই ফিল্ডটি আবশ্যক",
+    "invalidEmail": "সঠিক ইমেইল ঠিকানা দিন",
+    "minLength": "কমপক্ষে {{count}} অক্ষর হতে হবে",
+    "maxLength": "সর্বোচ্চ {{count}} অক্ষর হতে পারবে",
+    "passwordMismatch": "পাসওয়ার্ড মিলছে না",
+    "priceMin": "দাম ঋণাত্মক হতে পারবে না",
+    "priceMax": "দামটি অনেক বেশি"
+  },
+  "settings": {
+    "title": "সেটিংস",
+    "appearance": "থিম",
+    "colorTheme": "কালার থিম",
+    "mode": {
+      "label": "মোড",
+      "light": "লাইট",
+      "dark": "ডার্ক",
+      "system": "সিস্টেম"
+    },
+    "language": "ভাষা",
+    "languageBn": "বাংলা",
+    "languageEn": "English"
+  },
+  "theme": {
+    "emerald": "এমেরাল্ড",
+    "blue": "ব্লু",
+    "violet": "ভায়োলেট",
+    "rose": "রোজ",
+    "orange": "অরেঞ্জ",
+    "slate": "স্লেট"
+  },
+  "footer": {
+    "rights": "সর্বস্বত্ব সংরক্ষিত।",
+    "tagline": "প্রতিদিনের বাজারের জন্য, কার্টিস্টের কায়দায় তৈরি।"
+  }
+}
